@@ -11,7 +11,7 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-
+$ios-link:                        rgb(0, 122, 255) !default;
 
 // Base
 // -------------------------------
@@ -614,7 +614,7 @@ $sheet-border-radius-bottom:      0px 0px 3px 3px !default;
 // Popups
 // -------------------------------
 
-$popup-width:                     250px !default;
+$popup-width:                     300px !default;
 $popup-enter-animation:           superScaleIn !default;
 $popup-enter-animation-duration:  0.2s !default;
 $popup-leave-animation-duration:  0.1s !default;
@@ -626,6 +626,7 @@ $popup-button-border-radius:      2px !default;
 $popup-button-line-height:        20px !default;
 $popup-button-min-height:         45px !default;
 
+$popup-border-ios:                rgba(0, 0, 0, .08) solid thin !default;
 
 // Loading
 // -------------------------------
@@ -720,3 +721,16 @@ $z-index-click-block:             99999 !default;
 // -------------------------------
 
 $ios-statusbar-height:           20px !default;
+
+$android-text: rgba(0, 0, 0, .6) !default;
+$android-link: #2196F3 !default;
+
+// Courtesy of https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d
+$android-depth-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !default;
+$android-depth-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !default;
+$android-depth-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !default;
+$android-depth-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !default;
+$android-depth-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !default;
+
+$android-button-height: 70px !default;
+$android-button-slim-height: 50px !default;

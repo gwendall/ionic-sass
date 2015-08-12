@@ -46,8 +46,13 @@
     border-radius: $popup-border-radius;
     background-color: $popup-background-color;
 
+    img {
+      max-width: 100%;
+    }
+
     @include display-flex();
     @include flex-direction(column);
+
   }
 }
 
@@ -101,5 +106,139 @@
 
   .popup-backdrop, .popup {
     pointer-events: auto;
+  }
+}
+
+.platform-ios {
+  .popup {
+    font-family: "Helvetica Neue";
+    border-radius: 8px;
+    text-align: center;
+    .popup-head {
+      border-bottom: 0;
+    }
+    .popup-body {
+      border-top: $popup-border-ios;
+      padding: 15px;
+      .popup-prompt-text {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        border-radius: 5px;
+        padding: 10px;
+        border: $popup-border-ios;
+      }
+    }
+    .popup-buttons {
+      min-height: auto;
+      padding: 0;
+      border-top: $popup-border-ios;
+      .button {
+        height: 50px;
+        min-height: 50px;
+        line-height: 50px;
+        color: $ios-link;
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0;
+        border: none;
+        border-left: $popup-border-ios;
+        &:last-child {
+          border-right: none;
+        }
+        &.button-positive {
+          font-weight: bold;
+        }
+      }
+      &.popup-buttons-vertical {
+        flex-direction: column-reverse;
+        .button {
+          border: none;
+          border-bottom: $popup-border-ios;
+          &:first-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// See http://phandroid.com/2014/06/25/android-l-google-apps-material-design/
+.platform-android {
+  .popup {
+    // font-family: "Helvetica Neue";
+    border-radius: 2px;
+    text-align: left;
+    box-shadow: $android-depth-4;
+    background-color: white;
+    color: $android-text;
+    .popup-head {
+      border-bottom: 0;
+      text-align: left;
+      padding: 20px;
+      .popup-title {
+        font-size: 1.3rem;
+      }
+    }
+    .popup-body {
+      border-top: 0;
+      padding: 20px;
+      padding-top: 0;
+      .popup-prompt-text {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        border-radius: 0;
+        border: 0;
+        border-bottom: rgba(0, 0, 0, .2) solid thin;
+        padding: 0;
+        padding: 1px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    .popup-buttons {
+      min-height: auto;
+      padding: 0;
+      border-top: 0;
+      justify-content: flex-end;
+      .button {
+        flex: none;
+        text-transform: uppercase;
+        height: $android-button-height;
+        min-height: $android-button-height;
+        line-height: $android-button-height;
+        color: $android-text;
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0;
+        border: 0;
+        padding: 0 10px;
+        font-size: .9rem;
+        font-weight: bold;
+        &:last-child {
+          padding-right: 25px;
+        }
+        &.button-positive {
+          color: $android-link;
+        }
+      }
+      &.popup-buttons-vertical {
+        flex-direction: column-reverse;
+        flex: auto;
+        .button {
+          height: $android-button-slim-height;
+          min-height: $android-button-slim-height;
+          line-height: $android-button-slim-height;
+          &:last-child {
+            border: 0;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
   }
 }
