@@ -613,7 +613,7 @@ $sheet-border-radius-bottom:      0px 0px 3px 3px !default;
 // Popups
 // -------------------------------
 
-$popup-width:                     300px !default;
+$popup-width:                     250px !default;
 $popup-enter-animation:           superScaleIn !default;
 $popup-enter-animation-duration:  0.2s !default;
 $popup-leave-animation-duration:  0.1s !default;
@@ -719,7 +719,7 @@ $z-index-click-block:             99999 !default;
 // Platform
 // -------------------------------
 
-$ios-statusbar-height:           20px !default;
+$ios-statusbar-height:            20px !default;
 $ios-link:                        rgb(0, 122, 255) !default;
 
 $android-text: rgba(0, 0, 0, .6) !default;
