@@ -46,6 +46,10 @@
   }
 }
 
+.platform-android.platform-cordova {
+  font-family: "Roboto", sans-serif;
+}
+
 @media (orientation:landscape) {
   .platform-ios.platform-browser.platform-ipad {
     position: fixed; // required for iPad 7 Safari
